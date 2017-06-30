@@ -1,3 +1,4 @@
 class Service < ActiveRecord::Base
-  belongs_to :stylist
+  has_many :service_stylists
+  has_many :stylists, through: :service_stylists
 end
