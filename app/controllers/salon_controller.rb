@@ -1,0 +1,3 @@
+class SalonController < ApplicationController 
+
+end
