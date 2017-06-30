@@ -2,12 +2,60 @@
 <html>
   <head>
     <title>Open Salon</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <style>
+      body {
+        background:#f7f7f7;
+        font-family:"Lato";
+      }
+      li, p {
+        font-size: 22px;
+        color: #000;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family:"Raleway";
+        color: #1565c0;
+      }
+
+      a {
+        color: #1565c0!important;
+      }
+
+      .card-block {
+
+        border: 1px solid rgba(0,0,0,.125);
+        padding: 20px;
+        margin-bottom: 10px;
+
+      }
+
+      header {
+        height: 100px;
+        background: #1565c0;
+        padding: 20px;
+        margin-bottom: 40px;
+      }
+
+      .top-bar h1{
+        margin-top: 10px;
+        color: #fff;
+      }
+
+      .img-container img {
+        max-width: 100%;
+      }
+
+    </style>
   </head>
   <body>
-
+    <header>
+      <div class="container">
+        <div class="top-bar">
+          <h1>Open Salon</h1>
+        </div>
+      </div>
+    </header>
     <div class="container">
       <%= yield %>
     </div>

@@ -2,12 +2,12 @@ class SalonController < ApplicationController
 
   get "/salons" do
     @salons = Salon.all
-    erb :'salon/index'
+    erb :'salons/index'
   end
 
-  get "salons/:id" do
+  get "/salons/:id" do
     @salon = Salon.find(params[:id])
-    erb :show
+    erb :'salons/show'
   end
 
 end

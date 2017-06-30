@@ -1,0 +1,8 @@
+<div class="card-block">
+  <h2>Here are all of the stylists:</h2>
+  <% @stylists.each do |stylist| %>
+    <ul>
+      <li><a href= <%= "stylists/#{stylist.id}" %> ><%= stylist.name %></a></li>
+    </ul>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<div class="card-block">
+  <h2>Here are all of the salons:</h2>
+  <% @salons.each do |salon| %>
+    <ul>
+      <li><a href= <%= "salons/#{salon.id}" %> ><%= salon.name %></a></li>
+    </ul>
+  <% end %>
+</div>
