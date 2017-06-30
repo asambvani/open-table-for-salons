@@ -1,4 +1,4 @@
 class Appointment < ActiveRecord::Base
-  has_many :stylists
-  has_many :customers
+  belongs_to :stylist
+  belongs_to :customer
 end

@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20170630154711) do
 
   create_table "appointments", force: :cascade do |t|
-    t.datetime "date_time"
+    t.string "date_time"
     t.string "service"
     t.integer "stylist_id"
     t.integer "customer_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170630154711) do
     t.string "name"
     t.string "address"
     t.string "phone"
+    t.string "hours"
   end
 
   create_table "service_stylists", force: :cascade do |t|
@@ -39,7 +40,6 @@ ActiveRecord::Schema.define(version: 20170630154711) do
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.integer "price"
-    t.integer "stylist_id"
   end
 
   create_table "stylists", force: :cascade do |t|
