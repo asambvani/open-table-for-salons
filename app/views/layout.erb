@@ -23,18 +23,22 @@
         color: #000;
         font-family: 'Lato', sans-serif;
       }
-      h1, h2, h3, h4, h5, h6 {
+      h1, h2, h4, h5, h6 {
         font-family:'Raleway', sans-serif;
         color: #536dfe;
       }
+
       a {
-        color: #536dfe
+        color: #536dfe;
       }
       footer p {
         color:#fff;
       }
       select {
         display:block!important;
+      }
+      span {
+        color: #536dfe;
       }
 
       /* Change Material Form Styles */
@@ -150,6 +154,7 @@
         $('.parallax').parallax();
         $(".button-collapse").sideNav();
         $('.modal').modal();
+        $('select').material_select('destroy');
       });
     </script>
 

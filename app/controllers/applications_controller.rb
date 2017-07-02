@@ -11,7 +11,13 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/availabilities' do
-    @date = "#{params[:date].month}-#{params[:date].day}-#{params[:date].year}"
-    @salon = params[:salon].name
+    @date = "#{params[:date].to_datetime.month}-#{params[:date].to_datetime.day}-#{params[:date].to_datetime.year}"
+    @salon = params[:salon]
+    erb :'/stylists/availabilities'
   end
+
+  get '/stylists/availabilities' do
+    erb:'/stylists/availabilities'
+  end
+
 end

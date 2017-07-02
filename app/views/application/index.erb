@@ -1,13 +1,13 @@
 <div class="row">
   <h1 id= "welcome">Welcome to Open Salon!</h1>
   <p> Search : </p>
-  <form action= "/availabilities" method="POST">
+  <form action= "/stylists/availabilities" method="POST">
     <!-- DROPDOWN 1 -->
      <div class="input-field col s4">
         <select name="date">
           <option  selected>Select a day</option>
           <% @date_range.each do |day| %>
-            <option value=<%= day %> > <%= "#{day.month}-#{day.day}-#{day.year}"%></option>
+            <option value=<%= day %> > <%= "#{day.month}/#{day.day}/#{day.year}"%></option>
           <% end %>
         </select>
       </div>
@@ -16,7 +16,7 @@
         <select name="salon">
           <option selected>Select a Salon</option>
           <% @salons.each do |salon| %>
-            <option value=<%= salon %> > <%= "#{salon.name}" %></option>
+            <option value=<%= salon.name %> > <%= "#{salon.name}" %></option>
           <% end %>
         </select>
       </div>
