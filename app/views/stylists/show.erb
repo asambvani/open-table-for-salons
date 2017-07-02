@@ -1,15 +1,15 @@
 <div class="row">
-  <div class="col-lg-8 col-md-8 col-sm-12">
-    <div class="card-block">
+  <div class="col m8 s12">
+    <div class="card-panel">
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <h3><%= @stylist.name %></h3>
+        <div class="col m6 s12">
+          <h4><%= @stylist.name %></h4>
           <div class="img-container">
             <img src="http://thekinkteam.com/wp-content/uploads/2017/01/woman-hair-stylist-1.jpg" />
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <h3>Services: <h3>
+        <div class="col m6 s12">
+          <h4>Services: <h4>
             <% @stylist.services.each do |service| %>
               <ul>
                 <li><%= service.name %></li>
@@ -19,18 +19,13 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-4 col-sm-12">
-    <div class="card-block">
-      <h3>Salon Info:</h3>
+  <div class="col m4 s12">
+    <div class="card-panel">
+      <h4>Salon Info:</h4>
       <a href= <%="/salons/#{@stylist.salon.id}" %> ><p><%= @stylist.salon.name %></p></a>
-      <p>Hours: <%= @stylist.salon.hours %></p>
-      <p>Phone: <%= @stylist.salon.phone %></p>
-      <p>Address: <%= @stylist.salon.address %></p>
-    </div>
-  </div>
-  <div class="col-lg-12">
-    <div class="card-block">
-      Availability to come...
+      <p><strong>Hours:</strong><%= @stylist.salon.hours %></p>
+      <p><strong>Phone:</strong><%= @stylist.salon.phone %></p>
+      <p><strong>Address:</strong><%= @stylist.salon.address %></p>
     </div>
   </div>
 </div>

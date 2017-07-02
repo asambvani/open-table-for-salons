@@ -1,66 +1,157 @@
 <!doctype html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Open Salon</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- MATERIAL ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- APPLE -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- MATERIAL STYLES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Raleway" rel="stylesheet">
+    <!-- STYLES: MOVE THESE FOR SURE -->
     <style>
       body {
         background:#f7f7f7;
-        font-family:"Lato";
+        font-family: 'Lato', sans-serif;
       }
       li, p {
-        font-size: 22px;
+        font-size: 18px;
         color: #000;
+        font-family: 'Lato', sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family:"Raleway";
-        color: #1565c0;
+        font-family:'Raleway', sans-serif;
+        color: #536dfe;
       }
-
       a {
-        color: #1565c0!important;
+        color: #536dfe
+      }
+      footer p {
+        color:#fff;
+      }
+      select {
+        display:block!important;
       }
 
-      .card-block {
-
-        border: 1px solid rgba(0,0,0,.125);
-        padding: 20px;
-        margin-bottom: 10px;
-
+      /* Change Material Form Styles */
+      input[type=text]:not(.browser-default):focus:not([readonly])+label {
+        color:#536dfe;
       }
-
-      header {
-        height: 100px;
-        background: #1565c0;
-        padding: 20px;
-        margin-bottom: 40px;
+      input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]),
+      input[type=text]:not(.browser-default):focus:not([readonly]){
+        border-bottom:1px solid #536dfe;
+        box-shadow:0 1px 0 0 #536dfe;
+        color:#536dfe;
       }
-
-      .top-bar h1{
-        margin-top: 10px;
-        color: #fff;
+      .submit-btn {
+        margin-top:1.25rem;
       }
-
+      .bg-primary {
+        background:#536dfe;
+      }
+      .card-panel {
+        border-top:4px solid #536dfe;
+      }
+      .card-panel h3 {
+        margin-top:8px;
+      }
       .img-container img {
         max-width: 100%;
       }
-
+      #welcome {
+        position:absolute;
+        top: 22%;
+        color:#fff;
+        text-align:center;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+      }
     </style>
+    <!-- STYLES -->
   </head>
+
   <body>
-    <header>
-      <div class="container">
-        <div class="top-bar">
-          <h1>Open Salon</h1>
-        </div>
-      </div>
-    </header>
+
+    <!-- HEADER  -->
+    <div class="nav-wrapper">
+		 <nav class="bg-primary" role="navigation">
+  			<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><a href="/">Open Salon</a></a>
+    			  <ul class="right hide-on-med-and-down dt-nav">
+      				<li><a href="/salons">Salons</a></li>
+      				<li><a href="/stylists">Stylists</a></li>
+      				<li><a href="#">My Appointments</a></li>
+      			  </ul>
+
+              <!-- MOBILE NAV -->
+      			  <ul id="nav-mobile" class="side-nav">
+      				<li><a class="sn-link" href="/salons">Salons</a></li>
+      				<li><a class="sn-link" href="/stylists">Stylists</a></li>
+      				<li><a class="sn-link" href="#">My Appointments</a></li>
+    			  </ul>
+    			  <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="zmdi zmdi-menu"></i></a>
+    			</div>
+  		  </nav>
+	  </div>
+    <!-- /HEADER  -->
+
+    <!-- PARALLAX -->
+    <div class="parallax-container">
+      <div class="parallax"><img src="http://www.letimelessbeaute.com/images/header/salonHeader4.jpg"></div>
+    </div>
+    <!-- /PARALLAX -->
+
+    <!-- MAIN  -->
     <div class="container">
       <%= yield %>
     </div>
+    <!-- /MAIN  -->
 
+    <!-- FOOTER -->
+    <!-- <footer class="page-footer bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Footer Content</h5>
+              <p>No idea what we will put here, maybe nothing</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2017 Open Salon
+          </div>
+        </div>
+      </footer> -->
+      <!-- /FOOTER -->
+
+    <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- MATERIALIZE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
+    <!-- SCRIPT -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.parallax').parallax();
+        $(".button-collapse").sideNav();
+        $('.modal').modal();
+      });
+    </script>
+
   </body>
 </html>
