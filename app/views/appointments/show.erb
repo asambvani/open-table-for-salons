@@ -1,1 +1,7 @@
-
+<h1 class="top-header">Appointment Information:</h1>
+<div class="card-panel">
+  <p><%= @appointment.customer.name %></p>
+  <p>Time: <%= @appointment.date_time %></p>
+  <p>Stylist: <a href= <%="/stylists/#{@appointment.stylist.id}"%>><%= @appointment.stylist.name %></a></p>
+  <p>Salon: <a href= <%="/salons/#{@appointment.stylist.salon.id}"%>><%= @appointment.stylist.salon.name %></a></p>
+</div>

@@ -1,11 +1,20 @@
+<p>Enter a new date and time (e.g., 6/30/17, 4pm):</p>
 <div class="row">
-  <form method="post" action= <%= "/appointments/#{@appointment.id}" %> >
-    <input id="hidden" type="hidden" name="_method" value="patch">
-    <label>Enter a new date and time (e.g., 6/30/17, 4pm)<input type="text" name="new_date_time" value=""></label>
-    <input type="submit" name="submit" value="Submit">
-  </form>
-  <form method="post" action= <%= "/appointments/#{@appointment.id}" %> >
-    <input id="hidden" type="hidden" name="_method" value="delete">
-    <input type="submit" name="delete" value="Delete">
-  </form>
+  <div class="col m6 s12">
+    <form method="post" action= <%= "/appointments/#{@appointment.id}" %> >
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <div class="col m8 s12">
+        <input type="text" name="new_date_time" value="">
+      </div>
+      <div class="col m4 s12">
+        <input class="btn waves-effect waves-light col bg-primary submit-btn" type="submit" name="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+  <div class="col m6 s12">
+    <form method="post" action= <%= "/appointments/#{@appointment.id}" %> >
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input class="btn waves-effect waves-light col bg-primary submit-btn" type="submit" name="delete" value="Delete">
+    </form>
+  </div>
 </div>
