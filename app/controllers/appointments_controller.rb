@@ -23,4 +23,16 @@ class AppointmentController < ApplicationController
     erb :'appointments/edit'
   end
 
+  get '/appointments/new/:month/:day/:year/:time/:am_pm/:stylist_id' do
+    @date = "#{params[:month]}/#{params[:day]}/#{params[:year]}"
+    @time = params[:time]
+    @am_pm = params[:am_pm]
+    @stylist = Stylist.find(params[:stylist_id])
+    erb :'/appointments/new'
+  end
+
+  post '/appointments' do
+    binding.pry
+  end
+
 end

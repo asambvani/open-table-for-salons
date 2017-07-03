@@ -11,14 +11,14 @@
                 <img src="http://thekinkteam.com/wp-content/uploads/2017/01/woman-hair-stylist-1.jpg" />
               </div>
             </div>
-            <div class="col m6 s12">
+            <div class="col m6 s12 appointment-button">
               <h4>Available Appointments: <h4>
                 <ul>
                   <% stylist.availabilities(@date)["am"].each do |am_time| %>
-                    <a class="waves-effect waves-light btn" href="#modal1"><li><%= "#{am_time}am" %></li></a>
+                    <a class="waves-effect bg-primary waves-light btn" href=<%="/appointments/new/#{am_time}/am/#{stylist.id}"%>><li><%= "#{am_time}am" %></li></a>
                   <% end %>
                   <% stylist.availabilities(@date)["pm"].each do |pm_time| %>
-                    <a class="waves-effect waves-light btn" href="#modal1 "><li><%= "#{pm_time}pm" %></li></a>
+                    <a class="waves-effect bg-primary waves-light btn" href="#modal1"><li><%= "#{pm_time}pm" %></li></a>
                   <% end %>
                 </ul>
             </div>
@@ -56,9 +56,14 @@
         </form>
       </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
-    </div>
+
+
+
+    <!-- <div class="modal-footer">
+      <a href="#" class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+      <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+    </div> -->
+
   </div>
 
 
